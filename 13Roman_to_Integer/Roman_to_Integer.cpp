@@ -1,6 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
+        //roman tanslate table
        map<char,int> romantrans={
             {'I', 1}, 
             {'V', 5}, 
@@ -17,7 +18,7 @@ public:
            
            while(count>-1){
                if(romantrans.find(s[count])==romantrans.end())
-                   throw 0;
+                   throw 0; // char is not in table
                else if((romantrans.find(s[count]))->second >(romantrans.find(s[count-1]))->second){
                     totalnum+= (((romantrans.find(s[count]))->second) - ((romantrans.find(s[count-1]))->second));   
                     count--;
