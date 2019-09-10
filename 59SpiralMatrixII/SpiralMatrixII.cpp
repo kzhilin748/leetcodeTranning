@@ -1,6 +1,6 @@
 #include "SpiralMatrixII.h"
 
-vector<vector<int> > generateMatrix(int n) {
+vector<vector<int> > Solution::generateMatrix(int n) {
     vector<vector<int> > result(n,vector<int>(n, 0));
     if(n==0) return result;
     
